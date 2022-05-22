@@ -2,8 +2,13 @@ import requests
 import json
 
 ENDPOINT = "https://www.toyota.com/inventory/search"
+REGION = ["500"]
+DEALERS = ["32137"]
+PAGE_SIZE = 100
+YEARS = ["2022"]
+SERIES = ["86"]
 
-BODY = {"brand":"TOY","facetfields":[],"fields":[],"group":"false","groupfield":"","groupmode":"full","mode":"content","pagesize":"100","pagestart":"0","relevancy":"false","sortfield":"MSRP","sortorder":"ASC","show":{"accessory":{"derived":"true","zeroDollar":"false","extraCostColor":"false","exclude":"false"}},"filter":{"year":["2022"],"series":["86"],"model":[],"grade":[],"enginetransmission":[],"drive":[],"bed":[],"cab":[],"exteriorcolor":[],"interiorcolor":[],"accessory":[],"packages":[],"andfields":["accessory","packages"],"dealers":["32137"],"region":["500"]}}
+BODY = {"brand":"TOY","facetfields":[],"fields":[],"group":"false","groupfield":"","groupmode":"full","mode":"content","pagesize":str(PAGE_SIZE),"pagestart":"0","relevancy":"false","sortfield":"MSRP","sortorder":"ASC","show":{"accessory":{"derived":"true","zeroDollar":"false","extraCostColor":"false","exclude":"false"}},"filter":{"year":YEARS,"series":SERIES,"model":[],"grade":[],"enginetransmission":[],"drive":[],"bed":[],"cab":[],"exteriorcolor":[],"interiorcolor":[],"accessory":[],"packages":[],"andfields":["accessory","packages"],"dealers":DEALERS,"region":REGION}}
 
 
 HEADERS = {}
