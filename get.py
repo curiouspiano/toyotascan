@@ -3,9 +3,9 @@ import json
 
 ENDPOINT = "https://www.toyota.com/inventory/search"
 REGION = ["500"]
-DEALERS = ["32137"]
-PAGE_SIZE = 100
-YEARS = ["2022"]
+DEALERS = ["32137", "39061", "09156", "09229", "09194", "10078", "09183", "09202", "09156", "09241", "10078", "09182", "09242", "39058", "32152", "10044", "09236", "32140", "01077", "10135", "09231", "09196", "09214", "09194", "32150", "32076", "09043", "04041", "09191", "09205"]
+PAGE_SIZE = 200
+YEARS = ["2023"]
 SERIES = ["86"]
 
 BODY = {"brand":"TOY","facetfields":[],"fields":[],"group":"false","groupfield":"","groupmode":"full","mode":"content","pagesize":str(PAGE_SIZE),"pagestart":"0","relevancy":"false","sortfield":"MSRP","sortorder":"ASC","show":{"accessory":{"derived":"true","zeroDollar":"false","extraCostColor":"false","exclude":"false"}},"filter":{"year":YEARS,"series":SERIES,"model":[],"grade":[],"enginetransmission":[],"drive":[],"bed":[],"cab":[],"exteriorcolor":[],"interiorcolor":[],"accessory":[],"packages":[],"andfields":["accessory","packages"],"dealers":DEALERS,"region":REGION}}
